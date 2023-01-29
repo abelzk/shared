@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/script/calc.js"></script>
+  </head>
+  <body onload="calculation()" onmousemove="calculation()">
+
+    <div class="container-main">
+      <div class="img-cont">
+        <div class="img">
+          <img src="/images/close.svg" alt="">
+        </div>
+      </div>
+      <div class="info">
+        <div class="pnt-info">
+          <h3 class="pnt-title">Patient Information</h3>
+          <h4>Abel Zekarias</h4>
+          <h4>Hawassa, Industrial</h4>
+          <h4>(+251)966094996</h4>
+        </div>
+        <div class="pys-info">
+          <h3>Physician's Information</h3>
+          <h4>Dr. Ababe Kebede</h4>
+          <h4>Hawassa, Gebriel St</h4>
+          <h4>(+251)911090009</h4>
+        </div>
+      </div>
+      <hr>
+      <table class="info-invoice">
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Full Check Up</td>
+          <td>Full Body Check Up</td>
+          <td>$746.00</td>
+        </tr>
+        <tr>
+          <td>Full Check Up</td>
+          <td>Ear & Throat Examination</td>
+          <td>$746.00</td>
+        </tr>
+        <tr>
+          <td>Ear & Throat Examination</td>
+          <td>Infection Due To Inflamation</td>
+          <td>$1,000.00</td>
+        </tr>
+        <tr>
+          <td class="tot-price">Sub Total </td>
+          <td> </td>
+          <td class="tot-price">$2,492.00</td>
+        </tr>
+      </table>
+      <div class="invoice">
+        <div class="payment-source">
+
+          <!-- <h4>Payment Type</h4> -->
+          <div class="ptype">
+          </div>
+          <input type="checkbox" id="checker" onchange="calculation()">
+          <h4 id="ptype">Self Sponsored</h4>
+          <div class="per-number" id="pernum"><input onchange="calculation()" type="number" name="per-number" id="percent" value="0" max="100" min="0" step="5" disabled></div>
+          <div class="lbl-percent"><label id="lbl-perc">%</label></div>
+        </div>
+        <div class="calculation">
+          <div class="price-detail">
+            <h3 class="end-price">Service</h3>
+            <h3 class="pre-paid">Pre Paid</h3>
+            <h3 id="discount" class="discount">Discount</h3>
+            <h3 id="test">Total</h3>
+          </div>
+          <div class="num-left">
+            <h3 id="value11" onchange="calculation()" class="end-price">2492.00</h3>
+            <h3 id="value22" onchange="calculation()" class="pre-paid">-500</h3>
+            <h3 id="value33" onchange="calculation()" class="discount">0.00</h3>
+            <h3 id="tot-all1" onchange="calculation()" class="final">0.00</h3>
+          </div>
+        </div>
+      </div>
+      <div class="submit">
+        <div class="cont"><button class="pay-now" id="pay"><img class="print" src="/public/images/local_printshop.svg" alt=""> </button></div>
+      </div>
+    </div>
+  </body>
+</html>
